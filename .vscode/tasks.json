@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "kill-and-build",
+      "type": "shell",
+      "command": "killall -9 RetroDashboard 2>/dev/null; swift build && test -f .build/arm64-apple-macosx/debug/RetroDashboard",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$swiftc"]
+    }
+  ]
+}
