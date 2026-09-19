@@ -52,7 +52,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             GetApplicationEventTarget(),
             { (_, event, _) -> OSStatus in
                 Task { @MainActor in
-                    DashboardController.shared.toggleDashboard()
+                    // DashboardController.shared.toggleDashboard()
+                    NSApp.activate(ignoringOtherApps: true)
+
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                        DashboardController.shared.toggleDashboard()
+                    }
                 }
                 return noErr
             },

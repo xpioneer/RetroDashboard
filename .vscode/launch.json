@@ -19,6 +19,16 @@
       "target": "RetroDashboard",
       "configuration": "release",
       "preLaunchTask": "swift: Build Release RetroDashboard"
+    },
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:RetroDashboard}",
+      "name": "Debug RetroDashboard",
+      "target": "RetroDashboard",
+      "configuration": "debug",
+      "preLaunchTask": "swift: Build Debug RetroDashboard"
     }
   ]
 }
